@@ -1,0 +1,24 @@
+{
+  "name": "ouijastocks",
+  "version": "1.0.0",
+  "description": "Inspired by xkcd 1600. Helps you choose which stock to buy next using a Ouija Board",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchellgordon95/OuijaStocks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitchellgordon95/OujiaStocks/issues"
+  },
+  "homepage": "https://github.com/mitchellgordon95/OujiaStocks#readme",
+  "dependencies": {
+    "browserify": "^12.0.1",
+    "express": "^4.13.3",
+    "yahoo-finance": "^0.2.12"
+  }
+}

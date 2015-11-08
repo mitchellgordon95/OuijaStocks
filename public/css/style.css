@@ -1,0 +1,31 @@
+body {
+    background-image: url("../img/stars.jpg");
+    background-repeat: repeat;
+}
+#title-area {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+#board {
+    width: 100% 
+}
+#planchette {
+    display:none;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 0;
+}
+#board_container {
+    margin: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    width: 75%;
+}
+#log {
+    text-align: center;
+}
