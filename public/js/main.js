@@ -9,7 +9,7 @@ function move(x, y) {
     var plan_width = $("#planchette").width();
     var plan_height = $("#planchette").height();
     newx = (newx < 0) ? -newx : newx;
-    newy = (newy < 0) ? -newy : newy;
+    newy = (newy < -(plan_height / 2)) ? -plan_height / 2: newy;
     newx = (newx + plan_width  > cont_width) ? newx - (2 * (newx + plan_width - cont_width)) : newx;
     newy = (newy + plan_height  > cont_height) ? newy - (2 * (newy + plan_height - cont_height)) : newy;
     $("#planchette").css("left", newx);
@@ -25,6 +25,7 @@ $(document).ready(function () {
             var stock = $("#stock_name").val();
             if(stock == "") {
                 alert("Please enter a stock acronym");
+                return false;
             }
             var cont_width = $("#board_container").width();
             var cont_height = $("#board_container").height();
@@ -38,6 +39,9 @@ $(document).ready(function () {
         }
         else {
             $("#go_btn").attr("value", "Go!");
+            $("#planchette").hide();
+            $("#change").text("");
+            $("#date").text("");
             clearInterval(intId);
             running = false;
         }
@@ -110,4 +114,6 @@ function movePlanchette(stock, page, firstCall) {
             index += 1;
         }
     });
+
+    $("#date").text("Loading...");
 }
